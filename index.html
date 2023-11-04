@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Fake News Detection System</title>
+</head>
+
+
+</style>
+
+<body>
+  <!-- Header -->
+  <section id="header">
+    <div class="header container">
+      <div class="nav-bar">
+        <div class="brand">
+          <a href="#hero">
+            <h1><span>F</span>ake <span>N</span>ews <span>D</span><span>etection</span></h1>
+          </a>
+        </div>
+        <div class="nav-list">
+          <div class="hamburger">
+            <div class="bar"></div>
+          </div>
+          <ul>
+            <li><a href="#hero" data-after="Home">Home</a></li>
+            <li><a href="#services" data-after="Service">About Us</a></li>
+            <li><a href="#contact" data-after="Contact">Contact</a></li>
+            <li><a href="loginPageFND.html" data-after="Sign up">Sign up</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Header -->
+
+
+  <!-- Hero Section  -->
+  <section id="hero">
+    <div class="hero container">
+      <div>
+        <h1>Welcome, <span></span></h1>
+        <br>
+		 <form action="{{ url_for('predict')}}" method="POST">
+			<textarea  name="message" rows="6" cols="50" required="required" style="font-size: 18pt; opacity:50%;margin-top: 30px;" placeholder="Enter the NEWS article in the text box"></textarea>
+			<br> </br>
+			<button type="submit" id="button1" class="btn btn-primary btn-block btn-large">Predict</button>
+	
+				<div class="results">
+	
+		<!-- {% if prediction == ['FAKE']%}
+		<h2 style="color:crimson !important;font-size: large !important;">Looks like Spam News</h2>
+		{% elif prediction == ['REAL']%}
+					<h2 style="color:rgb(37, 192, 37) !important;font-size: large !important;"><b>Looks like Real News</b></h2>
+		{% endif %} -->
+	
+		</div>
+	
+		</form>
+      </div>
+    </div>
+  </section>
+  <!-- End Hero Section  -->
+
+  <!-- About Us Section -->
+  <section id="services">
+    <div class="services container">
+      <div class="service-top">
+        <h1 class="section-title">About<span>Us</span></h1>
+        <p>We the team Error are ressolving the problems of todays era which are related to News and misinformation cmpaighns which diverts the mind of public that inturn affect the social environment of nations.Our applications filters out the data of the news in many levels to assure the correctness of news with percentage of truthness. We build up the website for wellfare of public and to prevent trust deficite from being developed among the society. Many a times due to fake news and misinformation campaign being ran by some funded organisation targeting a particular community or a country leads to severe distruction, savvotages, riots massacre etc.This could be prevented if the information is filtered before reaching the common people.
+        Our website performs the very task as mentioned above and prevent such kind of unrest in the society.
+        Moreover, sometimes many rival organisation tend to tarnish the image of there competitors by spreading fake information this could be prevented by using our portal.</p>
+      </div>
+      <div class="service-bottom">
+        <div class="service-item">
+          <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/services.png" /></div>
+          <h2>Siddhant Pratap Singh</h2>
+          <p>Student at ABESIT Ghaziabad.
+          </p>
+        </div>
+        <div class="service-item">
+          <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/services.png" /></div>
+          <h2>Ayushman Singh</h2>
+          <p>Student at ABESIT Ghaziabad.</p>
+        </div>
+        <div class="service-item">
+          <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/services.png" /></div>
+          <h2>Ayush Kushwaha</h2>
+          <p>Student at ABESIT Ghaziabad.</p>
+      </div>
+      <div class="service-item">
+        <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/services.png" /></div>
+        <h2>Shubham Gaud</h2>
+        <p>Student at ABESIT Ghaziabad.</p>
+    </div>
+    </div>
+  </section>
+  <!-- End Service Section -->
+
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="contact container">
+      <div>
+        <h1 class="section-title">Contact <span>info</span></h1>
+      </div>
+      <div class="contact-items">
+        <div class="contact-item">
+          <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/phone.png" /></div>
+          <div class="contact-info">
+            <h1>Phone</h1>
+            <h2>+91 8923075264</h2>
+            <h2>+91 6388619371</h2>
+            <h2>+91 9792107516</h2>
+            <h2>+91 6387675020</h2>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/new-post.png" /></div>
+          <div class="contact-info">
+            <h1>Email</h1>
+            <h2>pratapsid2003@gmail.com</h2>
+            <h2>ayushmanas0087@gmail.com</h2>
+            <h2>ayush.km123@gmail.com</h2>
+            <h2>shubhamgaud85693@gmail.com</h2>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/map-marker.png" /></div>
+          <div class="contact-info">
+            <h1>Address</h1>
+            <h2>Crossing Republic ,Ghaziabad </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Contact Section -->
+
+  <!-- Footer -->
+  <section id="footer">
+    <div class="footer container">
+      <div class="brand">
+        <h1><span>F</span>ake <span>N</span>ews</h1>
+      </div>
+      <h2>Your Complete Web Solution</h2>
+      <p>Copyright © 2023 Siddhant,Ayushman,Ayush,Shubham. All rights reserved</p>
+    </div>
+  </section>
+  <!-- End Footer -->
+</body>
+
+</html>
